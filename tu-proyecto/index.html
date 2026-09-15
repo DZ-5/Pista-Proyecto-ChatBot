@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PISTA | Data, RPA e IA con garantía Escrow</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= FONDO PANTALLA COMPLETA ================= -->
+  <div class="pista-fondo" role="img" aria-label="PISTA - Soluciones de Data, RPA e IA"></div>
+
+  <!-- ================= BOTÓN FLOTANTE DEL CHATBOT ================= -->
+  <button id="pista-fab" class="pista-fab" aria-label="Abrir Asistente PISTA" aria-expanded="false">
+    <img src="img/icono-bot.png" alt="" class="pista-fab-icon">
+    <span class="pista-fab-ping"></span>
+  </button>
+
+  <!-- ================= VENTANA DEL CHATBOT ================= -->
+  <section id="pista-chat" class="pista-chat" aria-hidden="true">
+
+    <header class="pista-chat-header">
+      <div class="pista-chat-header-info">
+        <img src="img/icono-bot.png" alt="" class="pista-chat-header-icon">
+        <div class="pista-chat-header-text">
+          <strong>Asistente PISTA</strong>
+          <span class="pista-status"><i></i> En línea · Vista previa local</span>
+        </div>
+      </div>
+      <div class="pista-chat-header-actions">
+        <button id="pista-reset" class="pista-icon-btn" title="Reiniciar conversación" aria-label="Reiniciar conversación">⟲</button>
+        <button id="pista-close" class="pista-icon-btn" title="Cerrar" aria-label="Cerrar chat">✕</button>
+      </div>
+    </header>
+
+    <div id="pista-messages" class="pista-messages" role="log" aria-live="polite"></div>
+
+    <div id="pista-quick-replies" class="pista-quick-replies"></div>
+
+    <form id="pista-input-form" class="pista-input-bar" autocomplete="off">
+      <input
+        type="text"
+        id="pista-input"
+        class="pista-input"
+        placeholder="Escribe tu mensaje…"
+        aria-label="Escribe tu mensaje"
+        maxlength="300"
+      >
+      <button type="submit" class="pista-send-btn" aria-label="Enviar mensaje">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 2 11 13" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 2 15 22l-4-9-9-4 20-9Z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </form>
+
+  </section>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
